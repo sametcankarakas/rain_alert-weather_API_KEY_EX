@@ -12,11 +12,9 @@ auth_token  = "32fc675509cc938c6d9def563b3f70bc"
 
 
 #ev konum
-# MY_LAT = 40.983148
-# MY_LONG = 28.715770
+MY_LAT = 40.983148
+MY_LONG = 28.715770
 
-MY_LAT = 40.8
-MY_LONG = 18.53
 
 weather_params = {
     # "q": "istanbul",
@@ -40,11 +38,13 @@ for hour_data in weather_slice:
         will_rain = True
 
 if will_rain:
+    print("loo")
     client = Client(account_sid, auth_token)
     message = client.messages.create(
         to="+905375167270",
         from_="+18043748512",
-        body="yağış var diyorlar :)")
+        body="Bugün yağış var diyorlar ☂️")
     print(message.sid)
     print(message.status)
 
+print("This is the end")

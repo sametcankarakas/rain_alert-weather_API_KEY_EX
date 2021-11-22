@@ -18,3 +18,4 @@ print(response.status_code)
 response.raise_for_status()
 data = response.json()
 print(data)
+

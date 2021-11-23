@@ -38,7 +38,6 @@ for hour_data in weather_slice:
         will_rain = True
 
 if will_rain:
-    print("loo")
     client = Client(account_sid, auth_token)
     message = client.messages.create(
         to="+905375167270",
@@ -46,5 +45,3 @@ if will_rain:
         body="Bugün yağış var diyorlar ☂️")
     print(message.sid)
     print(message.status)
-
-print("This is the end")
